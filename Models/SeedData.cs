@@ -44,12 +44,29 @@ namespace MvcDiunUpdate.Models
                 testData2.mime_type="application/vnd.docker.distribution.manifest.list.v2+json";
                 testData2.digest="sha256:9bcb7924e862a376860430d318335e00853942eb4523529fc5fa028537d4de7d";
                 testData2.created=DateTime.Parse("2020-04-26T12:23:56Z");
-                testData2.platform="linux/arm64";
+                testData2.platform="linux/mips";
+                    
+                
+                var testData3 = new DiunUpdateModel();
+                testData3.diun_version = "4.0.0";
+                testData3.hostname = "myserver";
+                testData3.status="new";
+                testData3.provider="file";
+                testData3.image="https://hub.docker.com/r/dozzle/dozzle";
+                testData3.hub_link="https://hub.docker.com/r/dozzle/dozzle";
+                testData3.mime_type="application/vnd.docker.distribution.manifest.list.v2+json";
+                testData3.digest="sha256:8e27c59c835d81148eb0ad8f7da77afb96262ba7e5c12eaa59034ee3b88b5e87";
+                testData3.created=DateTime.Parse("2020-04-25T12:23:56Z");
+                testData3.platform="linux/x86";
                     
 
-                context.DiunUpdateModel.AddRange(testData1,testData2);        
+                context.DiunUpdateModel.AddRange(testData1,testData2,testData3);        
                 context.SaveChanges();
-            }
+            //     context.DiunUpdateModel.AddRange(testData1,testData2,testData3);        
+            //     context.SaveChanges();
+            //     context.DiunUpdateModel.AddRange(testData1,testData2,testData3);        
+            //     context.SaveChanges();
+             }
         }
     }
 }
