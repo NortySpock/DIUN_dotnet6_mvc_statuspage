@@ -1,4 +1,4 @@
-namespace DIUN_razor_statuspage.Models;
+namespace DIUN_dotnet_mvc_statuspage.Models;
 
 public class ErrorViewModel
 {

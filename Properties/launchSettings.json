@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "DIUN_razor_statuspage": {
+    "DIUN_dotnet_mvc_statuspage": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

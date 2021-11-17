@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using DIUN_razor_statuspage.Models;
+using DIUN_dotnet_mvc_statuspage.Models;
 
     public class MvcDiunUpdateContext : DbContext
     {
@@ -12,5 +12,5 @@ using DIUN_razor_statuspage.Models;
         {
         }
 
-        public DbSet<DIUN_razor_statuspage.Models.DiunUpdateModel> DiunUpdateModel { get; set; }
+        public DbSet<DIUN_dotnet_mvc_statuspage.Models.DiunUpdateModel> DiunUpdateModel { get; set; }
     }

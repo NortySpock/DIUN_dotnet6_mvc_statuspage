@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 // using MvcDiunUpdate.Data;
-using DIUN_razor_statuspage.Models;
+using DIUN_dotnet_mvc_statuspage.Models;
 using System;
 using System.Linq;
 

@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DIUN_razor_statuspage.Models;
+namespace DIUN_dotnet_mvc_statuspage.Models;
 public class DiunUpdateModel
 {
   public DiunUpdateModel()

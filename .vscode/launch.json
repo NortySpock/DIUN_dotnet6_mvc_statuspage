@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net6.0/DIUN_razor_statuspage.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/DIUN_dotnet_mvc_statuspage.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

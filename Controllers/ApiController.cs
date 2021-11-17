@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DIUN_razor_statuspage.Models;
+using DIUN_dotnet_mvc_statuspage.Models;
 
-namespace DIUN_razor_statuspage.Controllers
+namespace DIUN_dotnet_mvc_statuspage.Controllers
 {
     public class ApiController : Controller
     {

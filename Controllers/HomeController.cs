@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DIUN_razor_statuspage.Models;
+using DIUN_dotnet_mvc_statuspage.Models;
 
-namespace DIUN_razor_statuspage.Controllers;
+namespace DIUN_dotnet_mvc_statuspage.Controllers;
 
 public class HomeController : Controller
 {
