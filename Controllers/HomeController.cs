@@ -2,20 +2,22 @@
 using Microsoft.AspNetCore.Mvc;
 using DIUN_dotnet_mvc_statuspage.Models;
 
+
 namespace DIUN_dotnet_mvc_statuspage.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly MvcDiunUpdateContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+
+    public HomeController(MvcDiunUpdateContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View(await ApiController.Index());
     }
 
     public IActionResult Privacy()

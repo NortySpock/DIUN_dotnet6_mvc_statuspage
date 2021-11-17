@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-// using MvcDiunUpdate.Data; //who knows what broke here
-// using MvcDiunUpdateContext.Models;
+
+using MvcDiunUpdate.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +15,13 @@ builder.Services.AddDbContext<MvcDiunUpdateContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

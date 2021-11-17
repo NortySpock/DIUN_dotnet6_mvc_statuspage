@@ -10,6 +10,7 @@ using DIUN_dotnet_mvc_statuspage.Models;
         public MvcDiunUpdateContext (DbContextOptions<MvcDiunUpdateContext> options)
             : base(options)
         {
+            this.Database.EnsureCreated();
         }
 
         public DbSet<DIUN_dotnet_mvc_statuspage.Models.DiunUpdateModel> DiunUpdateModel { get; set; }
