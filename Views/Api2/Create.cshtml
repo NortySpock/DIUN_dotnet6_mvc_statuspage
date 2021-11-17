@@ -1,0 +1,83 @@
+@model DIUN_razor_statuspage.Models.DiunUpdateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DiunUpdateModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="diun_version" class="control-label"></label>
+                <input asp-for="diun_version" class="form-control" />
+                <span asp-validation-for="diun_version" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hostname" class="control-label"></label>
+                <input asp-for="hostname" class="form-control" />
+                <span asp-validation-for="hostname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="provider" class="control-label"></label>
+                <input asp-for="provider" class="form-control" />
+                <span asp-validation-for="provider" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hub_link" class="control-label"></label>
+                <input asp-for="hub_link" class="form-control" />
+                <span asp-validation-for="hub_link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mime_type" class="control-label"></label>
+                <input asp-for="mime_type" class="form-control" />
+                <span asp-validation-for="mime_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="digest" class="control-label"></label>
+                <input asp-for="digest" class="form-control" />
+                <span asp-validation-for="digest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="created" class="control-label"></label>
+                <input asp-for="created" class="form-control" />
+                <span asp-validation-for="created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="platform" class="control-label"></label>
+                <input asp-for="platform" class="form-control" />
+                <span asp-validation-for="platform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
