@@ -9,7 +9,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th><!-- Details, left blank -->  </th>
+            <th>
+                <!-- Details, header left blank -->
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.hostname)
             </th>
@@ -31,28 +33,21 @@
             <th>
                 @Html.DisplayNameFor(model => model.hub_link)
             </th>
-
             <th>
-                @Html.DisplayNameFor(model => model.digest)
+                <!-- clear, header left blank -->
             </th>
-
-
-            <th>
-                @Html.DisplayNameFor(model => model.diun_version)
-            </th>
-            <th><!-- clear, left blank --> </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                  <td>
-                    <form asp-action="Details"  asp-route-Id="@item.Id">
+                <td>
+                    <form asp-action="Details" asp-route-Id="@item.Id">
                         <input type="hidden" asp-for="@item.Id" />
                         <input type="submit" value="Details" class="btn btn-info" />
                     </form>
-</td>
+                </td>
 
                 <td>
                     @Html.DisplayFor(modelItem => item.hostname)
@@ -75,19 +70,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.hub_link)
                 </td>
-
                 <td>
-                    @Html.DisplayFor(modelItem => item.digest)
-                </td>
-
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.diun_version)
-                </td>
-
-         
-                <td>
-                    <form asp-action="Delete"  asp-route-Id="@item.Id">
+                    <form asp-action="Delete" asp-route-Id="@item.Id">
                         <input type="hidden" asp-for="@item.Id" />
                         <input type="submit" value="Clear" class="btn btn-danger" />
                     </form>
