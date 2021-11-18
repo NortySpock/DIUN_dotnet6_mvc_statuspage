@@ -93,11 +93,14 @@ namespace DIUN_dotnet_mvc_statuspage.Controllers
             return Problem("GET Delete request is not supported (try POST Delete <id>)");
         }
 
-        // POST: Api/Delete/5 -- note that API deletes might not be a desired use case.
+        // POST: Api/Delete/5 -- note that API deletes might not be a desired use case for this app but who knows.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            var diunUpdateModel = await _context.DiunUpdateModel.FindAsync(id);
+            _context.DiunUpdateModel.Remove(diunUpdateModel);
+            await _context.SaveChangesAsync();
             return Ok(String.Format("Item with Id '{0}' was marked for deletion.", id));
         }
 
